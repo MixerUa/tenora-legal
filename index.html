@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenora — Privacy Policy</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.25rem; margin-top: 2.2em; border-bottom: 1px solid #e2e2e2; padding-bottom: 6px; }
+  .meta { color: #666; font-size: 0.92rem; margin-bottom: 2em; }
+  .lang-switch { margin-bottom: 1.6em; font-size: 0.95rem; }
+  .lang-switch a { color: #0a5fd6; text-decoration: none; }
+  .lang-switch a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.94rem; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  a { color: #0a5fd6; }
+  .note { background: #f7f9fc; border-left: 3px solid #0a5fd6; padding: 10px 14px; margin: 1em 0; font-size: 0.94rem; }
+</style>
+</head>
+<body>
+
+<p class="lang-switch">🇬🇧 English &nbsp;|&nbsp; <a href="privacy-ru.html">🇷🇺 Русская версия</a></p>
+
+<h1>Tenora — Privacy Policy</h1>
+<p class="meta">Effective date: September 24, 2026 · Applies to the Tenora Android app (package <code>app.tenora.android</code>)</p>
+
+<p>Tenora is a personal blood pressure, pulse, blood glucose and weight diary. This policy explains what
+information the app works with, where it is stored, when it can ever leave your device, and what choices and
+rights you have. Tenora is <strong>not a medical device</strong> and does not provide medical advice, diagnosis
+or treatment recommendations.</p>
+
+<h2>1. Information the app works with</h2>
+<ul>
+  <li><strong>Profile information</strong> you enter: name, date of birth, sex, height, a colour you pick for the profile.</li>
+  <li><strong>Health readings</strong> you enter or import: blood pressure, pulse, blood glucose, weight, plus optional
+  comments, symptoms and which medications were taken.</li>
+  <li><strong>Medications and reminders</strong> you set up: names, dosages, schedules, and your log of intakes.</li>
+  <li><strong>A camera-based pulse estimate</strong> (optional): if you use the camera to measure your pulse, the app
+  analyses the colour change of your fingertip in real time to estimate a heart-rate value. <strong>No photo or video is
+  ever taken, saved or transmitted</strong> — only the numeric result is kept, exactly like a manually entered pulse
+  reading.</li>
+  <li><strong>Bluetooth device readings</strong> (optional): if you connect a supported blood-pressure monitor, glucose
+  meter, scale or heart-rate strap, the app reads the measurement from the device over standard Bluetooth Low Energy
+  profiles. This does not use or read your location — Android requires the Bluetooth scanning permission to be
+  declared with the <code>neverForLocation</code> flag, which Tenora uses.</li>
+  <li><strong>Health Connect data</strong> (optional): if you turn on synchronisation, Tenora reads and/or writes blood
+  pressure, heart rate, blood glucose, weight and height through Android's Health Connect — only for the types you
+  approve, and only in the direction you choose (import, export, or both). This data stays on your device; Health
+  Connect is a system component, not a service operated by us.</li>
+  <li><strong>Subscription status</strong>: if you purchase Tenora Pro, Google Play Billing handles the payment and
+  tells the app only whether your subscription is active. Tenora never sees your payment details.</li>
+  <li><strong>Advertising identifiers</strong> (free version only): Google AdMob, used to show a full-screen ad, may
+  collect a device advertising identifier and technical/diagnostic data as described in Google's own privacy policy
+  (see §5). Tenora sends no personal information, keywords or context in the ad request itself.</li>
+</ul>
+<p>Tenora does <strong>not</strong> collect your precise location, contacts, microphone audio, or files outside its
+own storage, and it has no analytics or crash-reporting SDK collecting usage data at this time.</p>
+
+<h2>2. Where your data is stored</h2>
+<p>All health readings, profile information, medications and settings are stored <strong>only on your device</strong>,
+in a local database encrypted with SQLCipher (AES-256). The encryption key itself is protected by the Android
+Keystore. This data is deliberately excluded from Android's automatic device backup and from device-to-device
+transfer (<code>allowBackup="false"</code>), so it is never copied anywhere by the operating system without your own
+action.</p>
+
+<h2>3. When data can leave your device — and to where</h2>
+<p>Tenora has no server of its own. Your health data can only leave your device when <strong>you</strong> take one of
+these actions:</p>
+<table>
+<tr><th>Where it goes</th><th>What is sent</th><th>When</th></tr>
+<tr><td>Your own Google Drive</td><td>A JSON backup (optionally password-encrypted) and, if you choose, PDF/CSV copies of your last 30 days</td><td>Manual backup, or scheduled auto-backup you turned on. Tenora only requests the <code>drive.file</code> and <code>drive.appdata</code> scopes — it can read/write only the files it created itself, never your other Drive content.</td></tr>
+<tr><td>A folder you choose on your device</td><td>The same export files</td><td>Auto-export to a folder, if you turned it on</td></tr>
+<tr><td>Another app, or a printer</td><td>An export file (CSV/PDF/JSON)</td><td>When you tap Share or Print</td></tr>
+<tr><td>Health Connect</td><td>The health types you approved, in the direction you chose</td><td>Sync you turned on. Stays on your device.</td></tr>
+<tr><td>Google Play</td><td>Purchase/subscription data</td><td>When you buy or check your Pro status</td></tr>
+<tr><td>Google AdMob (free version only)</td><td>Advertising/device identifiers, per Google's SDK</td><td>When a full-screen ad is shown</td></tr>
+</table>
+<p>Your health data is never sent to the advertising module: in Tenora's own code architecture, the ads component has
+no dependency on the database or data layer, so it has no technical means to access your readings.</p>
+
+<h2>4. Consent for health data</h2>
+<p>The first time you use Tenora, the app asks for your explicit consent to process health data on your device,
+consistent with GDPR's approach to special-category data. You can withdraw this consent at any time from
+Privacy settings, which also lets you delete all data stored by the app.</p>
+
+<h2>5. Third-party services</h2>
+<p>Tenora relies on the following services, each governed by its own provider's privacy policy:</p>
+<ul>
+  <li><strong>Google Play Billing</strong> — subscription purchases.</li>
+  <li><strong>Google Drive</strong> — only if you connect it, for backups you control.</li>
+  <li><strong>Android Health Connect</strong> — only if you turn on sync; a system component of your device, not a
+  Google server.</li>
+  <li><strong>Google AdMob</strong> — free version only, to show ads. Where required by law (for example in the
+  EEA/UK), a consent form (Google's User Messaging Platform) asks for your choice about personalised advertising
+  before any ad is requested.</li>
+</ul>
+<p>General information about how Google uses data from apps that use its services:
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> and
+<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>.</p>
+
+<h2>6. Your rights and choices</h2>
+<ul>
+  <li><strong>Access and export</strong> — export your data at any time as JSON, CSV or PDF from the Export screen.</li>
+  <li><strong>Deletion</strong> — Settings → Privacy → "Delete all data" permanently erases everything stored on your
+  device. Copies you already saved to Google Drive, a device folder, or shared elsewhere are not affected by this
+  action and must be removed separately by you.</li>
+  <li><strong>Withdraw consent</strong> — available in the same Privacy screen.</li>
+  <li><strong>Disconnect Google Drive</strong> — revokes Tenora's access to your Drive from within the app.</li>
+</ul>
+
+<h2>7. Data security</h2>
+<p>Health data is encrypted at rest (SQLCipher, AES-256, Android-Keystore-protected key) and Tenora only communicates
+over encrypted connections (HTTPS) — the app's network security configuration does not permit unencrypted
+("cleartext") traffic.</p>
+
+<h2>8. Children's privacy</h2>
+<p>Tenora is not directed at children and its intended audience is adults. A profile's date of birth is used only to
+select the correct health-classification scale for that profile (for example, whether paediatric or adult blood
+pressure ranges apply) — it does not change who may use the app.</p>
+
+<h2>9. Not a medical device</h2>
+<p>Tenora helps you keep a personal diary and shows general, internationally recognised classification ranges (such
+as ESC/AHA/ADA) for context. It does not diagnose any condition, does not replace professional medical advice, and
+you should always consult a qualified healthcare professional about your health.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>If Tenora starts using a new data-processing service (for example, crash reporting or analytics), this policy will
+be updated before that change ships, and the effective date above will change accordingly.</p>
+
+<h2>11. Contact</h2>
+<p>Questions about this policy or your data: <a href="mailto:ua.mixerapps@gmail.com">ua.mixerapps@gmail.com</a></p>
+
+</body>
+</html>

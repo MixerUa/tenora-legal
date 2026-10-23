@@ -34,7 +34,7 @@
 <p class="lang-switch">🇬🇧 English &nbsp;|&nbsp; <a href="privacy-ru.html">🇷🇺 Русская версия</a></p>
 
 <h1>Tenora — Privacy Policy</h1>
-<p class="meta">Effective date: September 24, 2026 · Applies to the Tenora Android app (package <code>app.tenora.android</code>)</p>
+<p class="meta">Effective date: October 23, 2026 · Applies to the Tenora Android app (package <code>app.tenora.android</code>)</p>
 
 <p>Tenora is a personal blood pressure, pulse, blood glucose and weight diary. This policy explains what
 information the app works with, where it is stored, when it can ever leave your device, and what choices and
@@ -64,9 +64,17 @@ or treatment recommendations.</p>
   <li><strong>Advertising identifiers</strong> (free version only): Google AdMob, used to show a full-screen ad, may
   collect a device advertising identifier and technical/diagnostic data as described in Google's own privacy policy
   (see §5). Tenora sends no personal information, keywords or context in the ad request itself.</li>
+  <li><strong>Ad settings from Firebase Remote Config</strong> (free version): the app downloads a few numbers (how
+  often an ad may appear and where) from Google's Firebase Remote Config. For this Firebase creates a random
+  installation identifier and receives basic technical data such as the app version and device type. None of your
+  health data is involved.</li>
+  <li><strong>Crash reports</strong> (optional, <strong>off by default</strong>): if you turn on "Send crash reports"
+  in the settings, Firebase Crashlytics sends the device model, Android version and the technical details of an
+  error, together with a random installation identifier. A report never contains your readings or profile. You can
+  turn this off at any time.</li>
 </ul>
 <p>Tenora does <strong>not</strong> collect your precise location, contacts, microphone audio, or files outside its
-own storage, and it has no analytics or crash-reporting SDK collecting usage data at this time.</p>
+own storage, and it has no analytics SDK. The only Firebase services used are the two described above.</p>
 
 <h2>2. Where your data is stored</h2>
 <p>All health readings, profile information, medications and settings are stored <strong>only on your device</strong>,
@@ -85,6 +93,8 @@ these actions:</p>
 <tr><td>Another app, or a printer</td><td>An export file (CSV/PDF/JSON)</td><td>When you tap Share or Print</td></tr>
 <tr><td>Health Connect</td><td>The health types you approved, in the direction you chose</td><td>Sync you turned on. Stays on your device.</td></tr>
 <tr><td>Google Play</td><td>Purchase/subscription data</td><td>When you buy or check your Pro status</td></tr>
+<tr><td>Google Firebase (Remote Config)</td><td>Random installation identifier and basic technical data; no health data</td><td>When the app fetches its ad settings (about twice a day at most)</td></tr>
+<tr><td>Google Firebase (Crashlytics)</td><td>Device model, Android version, technical error details, random installation identifier</td><td>Only if you turned on "Send crash reports", and only after a crash</td></tr>
 <tr><td>Google AdMob (free version only)</td><td>Advertising/device identifiers, per Google's SDK</td><td>When a full-screen ad is shown</td></tr>
 </table>
 <p>Your health data is never sent to the advertising module: in Tenora's own code architecture, the ads component has
@@ -102,6 +112,8 @@ Privacy settings, which also lets you delete all data stored by the app.</p>
   <li><strong>Google Drive</strong> — only if you connect it, for backups you control.</li>
   <li><strong>Android Health Connect</strong> — only if you turn on sync; a system component of your device, not a
   Google server.</li>
+  <li><strong>Firebase Remote Config</strong> and <strong>Firebase Crashlytics</strong> (Google) — ad settings, and
+  crash reports only if you turn them on.</li>
   <li><strong>Google AdMob</strong> — free version only, to show ads. Where required by law (for example in the
   EEA/UK), a consent form (Google's User Messaging Platform) asks for your choice about personalised advertising
   before any ad is requested.</li>
@@ -117,6 +129,7 @@ Privacy settings, which also lets you delete all data stored by the app.</p>
   device. Copies you already saved to Google Drive, a device folder, or shared elsewhere are not affected by this
   action and must be removed separately by you.</li>
   <li><strong>Withdraw consent</strong> — available in the same Privacy screen.</li>
+  <li><strong>Crash reports</strong> — off by default; switch them on or off in the settings.</li>
   <li><strong>Disconnect Google Drive</strong> — revokes Tenora's access to your Drive from within the app.</li>
 </ul>
 
@@ -136,11 +149,12 @@ as ESC/AHA/ADA) for context. It does not diagnose any condition, does not replac
 you should always consult a qualified healthcare professional about your health.</p>
 
 <h2>10. Changes to this policy</h2>
-<p>If Tenora starts using a new data-processing service (for example, crash reporting or analytics), this policy will
+<p>If Tenora starts using a new data-processing service (for example, analytics), this policy will
 be updated before that change ships, and the effective date above will change accordingly.</p>
 
 <h2>11. Contact</h2>
 <p>Questions about this policy or your data: <a href="mailto:ua.mixerapps@gmail.com">ua.mixerapps@gmail.com</a></p>
+<p>Data controller: MixerApps (the developer of Tenora). See also the <a href="terms.html">Terms of Use</a> and the <a href="data-deletion.html">data deletion instructions</a>.</p>
 
 </body>
 </html>
